@@ -1,43 +1,44 @@
-/* 자손 결합자. outer 클래스 안 모든 li에게 적용 */
-.outer li{
-  color: olivedrab;
+body{
+  font-family: 'pretendard';
+  margin: 0px;
 }
-/* 자식(1촌) 결합자. 클래스의 직속 자식에만 적용 */
-.outer>li{
-  color: dodgerblue;
+#container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
-.outer>li li{
-  text-decoration: underline;
+#header{
+  display: flex;
+  background-color: dodgerblue;
+  flex-basis: 100px;
+  padding: 12px;
+  align-items: flex-end;
+  gap: 12px;
 }
-/* 뒤따르는 모든 동생들 결합자. (내밑으로 집합) */
-.starter~li{
-  font-style: italic;
+#header div{
+  background-color: yellow;
+  padding: 12px 0;
+  text-align: center;
 }
-/* 뒤따르는 바로 다음 동생 결합자 */
-.starter+li{
-  font-weight: bold;
+#header div:first-child{
+  flex-grow: 0;
+  flex-basis: 100px;
 }
-/* 의사(가상)클래스: 첫 번째, 마지막 요소 */
-ol li:first-child, ol li:last-child{
-  color: yellowgreen;
+#header div:not(:first-child){
+  flex-grow: 1;
 }
-/* 의사클래스 안에 의사클래스 넣기: ~가 아닌 요소 */
-.outer>li:not(:last-child){
-  text-decoration: line-through;
+#main{
+  display: flex;
+  flex-direction: row;
+  flex: 1;  
+  justify-content: center;
+  align-items: center;
 }
-ul:not(.outer){
-  font-weight: bold;
+#content{
+  background-color: cornflowerblue;
+  padding: 24px;
 }
-/* 의사클래스: n번째 요소 */
-ol li:nth-child(3){
-  font-weight: bold;
-  color: deeppink;
-}
-ol li:nth-child(even){
-  text-decoration: underline;
-}
-/* 의사클래스: 마우스오버 */
-li:hover{
-  font-weight: bold;
-  color: blue;
+#footer{
+  background-color: tomato;
+  flex-basis: 60px;
 }
