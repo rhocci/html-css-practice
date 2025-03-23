@@ -1,0 +1,36 @@
+._1{
+  transition: all 1s;
+}
+._1:hover{
+  border-radius: 50px;
+  background-color: blueviolet;
+}
+._2:hover{
+  animation-name: beat;
+  animation-duration: 0.2s;
+}
+#loading > div{
+  animation-name: loading;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes beat {
+  from{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+@keyframes loading {
+  from{
+    transform: skewX(-25deg) translateX(-600px);
+  }
+  to{
+    transform: skewX(-25deg) translateX(0px);
+  }
+}

@@ -5,29 +5,87 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML & CSS 04-09-03</title>
+  <title>HTML & CSS 04-10-04</title>
 
-  <link rel="stylesheet" href="./03.css">
+  <!-- 이 파일을 직접 작성해보세요! -->
+  <link rel="stylesheet" href="./04.css">
 
-
+  <style>
+    body { margin: 36px; }
+    button {
+      all: unset;
+      margin-bottom: 2em;
+      padding: 0 2em;
+      height: 64px;
+      line-height: 64px;
+      font-size: 1.2em;
+      color: white;
+      background-color: tomato;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #loading {
+      position: relative;
+      width: 600px;
+      height: 40px;
+      background-color: lightblue;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    #loading > div {
+      display: flex;
+      width: 200%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #loading > div > div {
+      flex-grow: 1;
+    }
+    #loading > div > div:nth-child(odd) {
+      background-color: dodgerblue;
+    }
+  </style>
 </head>
 <body>
 
-  <main>
-    <nav>nav</nav>
-    <aside>aside</aside>
-    <section class="sec-1">.sec-1</section>
-    <section class="sec-2">
-      .sec-2
-      <div>
-        살어리 살어리랏다<br>쳥산애 살어리랏다<br>멀위랑 다래랑 먹고<br> 쳥산애 살어리랏다<br>얄리얄리 얄랑셩<br>얄라리 얄라<br>
-        우러라 우러라 새여<br>자고 니러 우러라 새여<br>널라와 시름 한 나도<br>자고 니러 우니로라<br>얄리얄리 얄라셩<br>얄라리 얄라<br>
-        가던 새 가던 새 본다<br>믈 아래 가던 새 본다<br>잉무든 장글란 가지고<br>믈 아래 가던 새 본다<br>얄리얄리 얄라셩<br>얄라리 얄라
-      </div>
-    </section>
-    <section class="sec-3">.sec-3</section>
-    <footer>footer</footer>
-  </main>
+  <button class="_1">
+    마우스 커서를 올려보세요!
+  </button>
+  <br>
+  <button class="_2">
+    마우스 커서를 올려보세요!
+  </button>
+  <br>
+  <div id="loading">
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
   
 </body>
 </html>
